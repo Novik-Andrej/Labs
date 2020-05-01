@@ -36,7 +36,8 @@ void output_pac(pacient pac)
 
 int main()
 {
-
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 	setlocale(LC_ALL, "ru");
 	pacient* pac = new pacient[5]; // указатель для массива структур
 	int pac_num; // количество пациентов
@@ -44,10 +45,6 @@ int main()
 	cout << "Duction of the number of patients\n";
 	int number;
 	cin >> number;
-	if (number > 5 || number==0) {
-		cout << "Error";
-		return 0;
-	}
 	switch (number)
 	{
 	case EMPTY:
@@ -131,8 +128,9 @@ int main()
 				cout << "Введите номер страхового полиса: ";
 				cin >> pac[i].insurance_policy_number;
 				cout << endl;
-
+				system("cls");
 			}
+			system("cls");
 		}
 
 		// если нужно вывести массив структур (2)
@@ -394,3 +392,5 @@ int main()
 	system("pause");
 	return 0;
 }
+
+
