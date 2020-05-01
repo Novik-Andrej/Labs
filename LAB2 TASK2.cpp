@@ -4,8 +4,8 @@
 using namespace std;
 int Finding_a_position(string S, string S0)
 {
-	for (int i = size(S) - 1, j, k; i >= 0; i--) {
-		for (j = size(S0) - 1, k = 0; j >= 0; j--, k++) {
+	for (int i = S.length() - 1, j, k; i >= 0; i--) {
+		for (j = S0.length() - 1, k = 0; j >= 0; j--, k++) {
 			if (S[i - k] != S0[j])
 				break;
 		}
